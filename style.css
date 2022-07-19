@@ -108,7 +108,7 @@ header .hamburger{
     justify-content: space-between;
     align-items: center;
     flex-direction: column; */
-    position: relative;
+     position: relative;
 }
 
 .container .sub-container{
@@ -116,7 +116,7 @@ header .hamburger{
     display: block;
 }
 
-.container .sub-container .big img{
+ .container .sub-container .big img{
     position: absolute;
     top:-40px;
     width:100%;
@@ -126,29 +126,27 @@ header .hamburger{
     z-index:1;
 }
 
-.container .sub-container .big img:nth-child(5),
-.container .sub-container .big img:last-child{
-    width:3%;
-    background-color: var(--background-color);
-    top:130px;
-    z-index:2;
-    border-radius: 100px;
-    padding:5px 7px;
-    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.322);
-}
-
-.container .sub-container .big img:nth-child(5){
-    left:10px;
-    padding:5px 8px;
-}
-
-.container .sub-container .big img:last-child{
-    right:10px;
-}
-
 .container .sub-container .thumbnail img{
     display: none;
 } 
+.container .sub-container .arrow{
+    z-index: 2;
+    position: relative;
+    top:0;
+}
+.container .sub-container .arrow img{
+    position: absolute;
+    top:120px;
+    background-color: white;
+    padding:10px 12px;
+    left:10px;
+    width:3%;
+    border-radius: 100px;
+}
+.container .sub-container .arrow .next{
+    right:10px;
+    left:auto;
+}
 
 .container section{
     background-color: var(--background-color);
@@ -177,7 +175,7 @@ header .hamburger{
     color:var(--secondary-color);
     padding: 5px 0 10px;
     line-height:1.2rem;
-}
+} 
 
 .container section aside{
     display: flex;
@@ -260,6 +258,7 @@ header .hamburger{
     padding:15px 0;
     border-radius: 5px;
     text-align: left;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.463);
 }
 
 .modal h4{
@@ -291,6 +290,15 @@ header .hamburger{
 
 .modal summary{
     text-align: left;
+}
+.modal .shoe{
+    font-size: 13px;
+    margin:8px 0px;
+}
+.modal .totals,
+.modal .price-tag,
+.modal .number{
+    font-size: 14px;
 }
 
 .modal button{
