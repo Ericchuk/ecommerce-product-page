@@ -46,12 +46,12 @@ header nav:last-child{
 header nav:last-child sup{
     position:absolute;
     top:0px;
-    left:45px;
+    left:55px;
     background-color: var(--h3andcta);
     color:var(--background-color);
     font-size: 13px;
     /* font-weight: 900; */
-    padding:0px 4px;
+    padding:0px 5px;
     border-radius:10px;
 }
 
@@ -449,20 +449,22 @@ header .hamburger{
     .tabFlex .addToCart svg{
         margin:0 20px 0 0;
     }
+    .modal-container{
+        display: none;
+    }
     .modal{
         width:300px;
-        display: block;
         position: absolute;
         top:20px;
         right:50px;
         left:auto;
         z-index:3;
-        height:200px;
+        /* height:200px; */
     }
     .modal button{
-        position: absolute;
+        /* position: absolute;
         bottom:0;
-        left:15px;
+        left:15px; */
     }
 }
 

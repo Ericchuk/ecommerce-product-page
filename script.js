@@ -10,6 +10,7 @@ let plus = document.querySelector(".plus");
 let minus = document.querySelector(".minus");
 let amount = document.querySelector(".amount");
 let cartItem = document.querySelector(".cartItems");
+let sup = document.querySelector("nav sup")
 
 console.log(cartItem);
 function openHamburger(){
@@ -51,6 +52,7 @@ minus.addEventListener("click", () => {
     }
 })
 
+let digit = 0;
 
 function addToModal(){
     let section = document.createElement("section");
@@ -76,18 +78,18 @@ function addToModal(){
     summary.appendChild(span2);
     summary.appendChild(b);
     p.textContent = "Autumn Limited Edition...";
-    span.textContent = `${this.parentElement.childNodes[7].childNodes[1].childNodes[1].textContent}`;
+    span.textContent = `${this.parentElement.parentElement.childNodes[7].childNodes[1].childNodes[1].textContent}`;
     span2.textContent = ` x ${a}`;
     let spanNumber = parseInt(span.textContent) * parseInt(a);
-
     b.textContent = `  $${spanNumber}.00`;
-    section.appendChild(dustBin)
-    console.log("000");
+    section.appendChild(dustBin);
+    console.log(cartItem.childElementCount - 1);
+    sup.textContent = cartItem.childElementCount - 1;
     // NOT REPETING OF PRODUUCT ALREADY IN CART BUT INCREASE FOR THAT SAME PRODUCT (HAVEN'T GOTTEN THE LOGIC YET)
     if(section.parentElement.childNodes.textContent == true){
         console.log(section.parentElement)
     }else{
-        console.log("222")
+        // console.log("222")
     };
 function del(){
     this.parentElement.style.display = "none";
