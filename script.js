@@ -53,8 +53,21 @@ minus.addEventListener("click", () => {
 })
 
 let digit = 0;
-
+// function checkCart(){
+//     if(cartItem.childElementCount != 1){
+//         cartItem.style.height = "auto" 
+//         cartItem.textContent = "";
+//     }else if(cartItem.childElementCount == 1){
+//         cartItem.style.height = "150px";
+//         cartItem.style.paddingTop = "90px";
+//         cartItem.textContent = "Your cart is empty";
+//     }
+// }
+// checkCart();
 function addToModal(){
+    
+    cartItem.style.paddingTop = "0px";
+    cartItem.style.height = "auto"
     let section = document.createElement("section");
     let img = document.createElement("img");
     img.setAttribute("src", `images/image-product-1-thumbnail.jpg`)
@@ -69,7 +82,7 @@ function addToModal(){
     b.className = "totals"
     let dustBin = document.createElement("img");
     dustBin.setAttribute("src", "images/icon-delete.svg");
-    let hasItem = false;
+    // let hasItem = false;
     cartItem.prepend(section);
     section.appendChild(img);
     section.appendChild(summary);
@@ -84,7 +97,8 @@ function addToModal(){
     b.textContent = `  $${spanNumber}.00`;
     section.appendChild(dustBin);
     console.log(cartItem.childElementCount - 1);
-    sup.textContent = cartItem.childElementCount - 1;
+    let number =  cartItem.childElementCount - 1;
+    sup.textContent = number;
     // NOT REPETING OF PRODUUCT ALREADY IN CART BUT INCREASE FOR THAT SAME PRODUCT (HAVEN'T GOTTEN THE LOGIC YET)
     if(section.parentElement.childNodes.textContent == true){
         console.log(section.parentElement)
@@ -93,7 +107,17 @@ function addToModal(){
     };
 function del(){
     this.parentElement.style.display = "none";
-    console.log("222");
+    // number = cartItem.childElementCount - 2;
+    
+    if(number === 1){
+        number = 0;
+        // cartItem.style.height = "100px";
+        // cartItem.textContent = "Your cart is empty";
+        // cartItem.style.paddingTop = "90px"
+        console.log(number)
+    }
+    sup.textContent = number--;
+    // console.log("222");
 }
 dustBin.addEventListener("click", del);
 }
@@ -109,6 +133,7 @@ let slideIndex = 1;
 showSlides(slideIndex);
 
     // NEXT / PREVIOUS CONTROL
+
 function plusBox(n){
     showSlides(slideIndex += n);
 }

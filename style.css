@@ -27,7 +27,7 @@ header{
     align-items: center;
     padding:10px;
     position: relative;
-    z-index:1;
+    z-index:3;
     background-color: var(--background-color);
 }
 
@@ -43,10 +43,10 @@ header nav:last-child{
     position: relative;
 }
 
-header nav:last-child sup{
+.sup{
     position:absolute;
-    top:0px;
-    left:55px;
+    top:-7px;
+    left:27px;
     background-color: var(--h3andcta);
     color:var(--background-color);
     font-size: 13px;
@@ -118,7 +118,7 @@ header .hamburger{
     display: block;
 }
 .container .sub-container .big img{
-  /*   position: absolute;*/
+    position:relative;
     top:-40px;
     width:100%;
     /* cursor: pointer; */
@@ -133,8 +133,6 @@ header .hamburger{
 } 
 .container .sub-container .arrow{
     z-index: 2;
-    position: relative;
-    top:0;
 } 
 .container .sub-container .arrow img{
     position: absolute;
@@ -155,7 +153,8 @@ header .hamburger{
     background-color: var(--background-color);
     /* border:2px solid red; */
     position: relative;
-    top:270px;
+    top:-30px;
+    /* border:2px solid black; */
     padding:30px 20px;
 }
 
@@ -322,13 +321,12 @@ header .hamburger{
 
 @media screen and (min-width:370px) {
     .container section{
-        top:330px;
-    }
-}
-@media screen and (min-width:370px) {
-    .container section{
-        top:390px;
+        top:-30px;
         padding:20px 35px;
+    }
+    .sup{
+        left:34%;
+        top:-10%;
     }
 }
 
@@ -458,7 +456,7 @@ header .hamburger{
         top:20px;
         right:50px;
         left:auto;
-        z-index:3;
+        z-index:7;
         /* height:200px; */
     }
     .modal button{
