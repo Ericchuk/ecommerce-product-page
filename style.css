@@ -124,7 +124,7 @@ header .hamburger{
     /* cursor: pointer; */
 }
 
-.container .sub-container .big img:first-child{
+.container .sub-container .big img{
     z-index:1;
 }
 .container .sub-container .thumbnail img{
@@ -427,8 +427,8 @@ header .hamburger{
         border-radius: 5px;
     }
     .container .sub-container .thumbnail img.first{
-        opacity:.7;
-        border:2px solid var(--h3andcta);
+        /* opacity:.7;
+        border:2px solid var(--h3andcta); */
     } 
     .tabFlex{
         display: flex;

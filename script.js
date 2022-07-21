@@ -53,17 +53,6 @@ minus.addEventListener("click", () => {
 })
 
 let digit = 0;
-// function checkCart(){
-//     if(cartItem.childElementCount != 1){
-//         cartItem.style.height = "auto" 
-//         cartItem.textContent = "";
-//     }else if(cartItem.childElementCount == 1){
-//         cartItem.style.height = "150px";
-//         cartItem.style.paddingTop = "90px";
-//         cartItem.textContent = "Your cart is empty";
-//     }
-// }
-// checkCart();
 function addToModal(){
     
     cartItem.style.paddingTop = "0px";
@@ -129,11 +118,12 @@ addToCart.addEventListener("click", addToModal);
 let previous = document.querySelector(".previous");
 let next = document.querySelector(".next");
 let boxImg = document.querySelectorAll(".big img");
+let smallImg = document.querySelectorAll(".thumbnail img");
 let slideIndex = 1;
 showSlides(slideIndex);
 
     // NEXT / PREVIOUS CONTROL
-
+    // DIDN'T WORK, YOU CAN HELP REVIEW
 function plusBox(n){
     showSlides(slideIndex += n);
 }
@@ -158,3 +148,89 @@ function showSlides(n){
 
 next.addEventListener("click", plusBox(1));
 previous.addEventListener("click", plusBox(-1));
+
+// DISPLAY IMAGE IN LARGE FORMAT on clicking thumbnail
+// for(let i = 0; i < boxImg.length; i++){
+//  function showImg(){
+//     boxImg[i].style.display = "block";  
+//     boxImg[i].style.position = "absolute";
+//     boxImg[i].style.top = "0";
+//     console.log("222")
+//   }
+//   smallImg[i].addEventListener  ("click", showImg);
+// }
+
+
+boxImg[0].style.display = "block";
+boxImg[1].style.display = "none";
+boxImg[2].style.display = "none";
+boxImg[3].style.display = "none";
+smallImg[0].style.border = "2px solid var(--h3andcta)";
+smallImg[0].style.opacity = ".5";
+
+function showImg1(){
+    boxImg[0].style.display = "block";
+    boxImg[1].style.display = "none";
+    boxImg[2].style.display = "none";
+    boxImg[3].style.display = "none";
+    smallImg[0].style.border = "2px solid var(--h3andcta)";
+    smallImg[0].style.opacity = ".5";
+    smallImg[2].style.border = "none";
+    smallImg[2].style.opacity = "10";
+    smallImg[1].style.border = "none";
+    smallImg[1].style.opacity = "10";
+    smallImg[3].style.border = "none";
+    smallImg[3].style.opacity = "10";
+}
+
+function showImg2(){
+    boxImg[1].style.display = "block";
+    boxImg[0].style.display = "none";
+    boxImg[2].style.display = "none";
+    boxImg[3].style.display = "none";
+    smallImg[1].style.border = "2px solid var(--h3andcta)";
+    smallImg[1].style.opacity = ".5";
+    smallImg[0].style.border = "none";
+    smallImg[0].style.opacity = "10";
+    smallImg[2].style.border = "none";
+    smallImg[2].style.opacity = "10";
+    smallImg[3].style.border = "none";
+    smallImg[3].style.opacity = "10";
+}
+
+function showImg3(){
+    boxImg[2].style.display = "flex";
+    smallImg[2].style.border = "2px solid var(--h3andcta)";
+    smallImg[2].style.opacity = ".5";
+    smallImg[0].style.border = "none";
+    smallImg[0].style.opacity = "10";
+    smallImg[1].style.border = "none";
+    smallImg[1].style.opacity = "10";
+    smallImg[3].style.border = "none";
+    smallImg[3].style.opacity = "10";
+    boxImg[1].style.display = "none";
+    boxImg[0].style.display = "none";
+    boxImg[3].style.display = "none";
+}
+
+function showImg4(){
+    boxImg[3].style.display = "block";
+    boxImg[2].style.display = "none";
+    boxImg[0].style.display = "none";
+    boxImg[1].style.display = "none";
+    smallImg[3].style.border = "2px solid var(--h3andcta)";
+    smallImg[3].style.opacity = ".5";
+    smallImg[0].style.border = "none";
+    smallImg[0].style.opacity = "10";
+    smallImg[1].style.border = "none";
+    smallImg[1].style.opacity = "10";
+    smallImg[2].style.border = "none";
+    smallImg[2].style.opacity = "10";
+}
+
+smallImg[0].addEventListener("click", showImg1);
+smallImg[1].addEventListener("click", showImg2);
+smallImg[2].addEventListener("click", showImg3);
+smallImg[3].addEventListener("click", showImg4);
+
+// ENLARGE ON CLICKING MAIN IMG 
