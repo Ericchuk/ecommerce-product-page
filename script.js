@@ -246,7 +246,8 @@ for(let i = 0; i < boxImg.length; i++){
 }
     function smallToEnlarge(){
         modalContent.src = this.src;
-        console.log("sss")
+        modalSmall[i].style.opacity = ".6";
+        modalSmall[i].style.border = "2px solid var(--h3andcta)"
     }
     modalSmall[i].addEventListener("click", smallToEnlarge)
     boxImg[i].addEventListener("click", enlarge);
