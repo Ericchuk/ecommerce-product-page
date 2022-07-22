@@ -121,7 +121,7 @@ header .hamburger{
     position:relative;
     top:-40px;
     width:100%;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 .container .sub-container .big img{
@@ -318,6 +318,10 @@ header .hamburger{
     font-weight: 700;
     cursor: pointer;
 }
+.modalForImageEnlarge{
+    display: none;
+}
+
 
 @media screen and (min-width:370px) {
     .container section{
@@ -327,6 +331,15 @@ header .hamburger{
     .sup{
         left:34%;
         top:-10%;
+    }
+    .modalForImageEnlarge{
+        display: none;
+    }
+    .modal-content{
+        display: none;
+    }
+    .modalThumbnail{
+        display: none;
     }
 }
 
@@ -463,6 +476,49 @@ header .hamburger{
         /* position: absolute;
         bottom:0;
         left:15px; */
+    }
+    .modalForImageEnlarge{
+        display: none;
+        z-index: 5;
+        border:2px solid black;
+        height:100%;
+        width:100%;
+        padding-top:80px;
+        position: fixed;
+        top:0;
+        left:0;
+        /* overflow: auto; */
+        background-color: rgba(0,0,0,0.9);
+    }
+    .modal-content{
+        margin:auto;
+        display: block;
+        width:30%;
+        max-width: 700px;
+        animation: zoom .6s;
+    }
+    .modal-close{
+        position: absolute;
+        top:15px;
+        right:25%;
+        color:white;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .modalThumbnail{
+        text-align: center;
+        display: block;
+        animation: zoom .6s;
+    }
+    .modalThumbnail img{
+        width:7%;
+        margin:20px 3px 0;
+    }
+    
+    @keyframes zoom {
+        from{transform:scale(0);}
+        to{transform: scale(1);}
     }
 }
 

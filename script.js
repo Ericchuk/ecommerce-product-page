@@ -234,3 +234,26 @@ smallImg[2].addEventListener("click", showImg3);
 smallImg[3].addEventListener("click", showImg4);
 
 // ENLARGE ON CLICKING MAIN IMG 
+
+let modalForEnlarge = document.querySelector(".modalForImageEnlarge");
+let modalContent = document.querySelector(".modal-content");
+let modalClose = document.querySelector(".modal-close")
+let modalSmall = document.querySelectorAll(".modalThumbnail img")
+for(let i = 0; i < boxImg.length; i++){
+    function enlarge(){
+    modalForEnlarge.style.display = "block";
+    modalContent.src = this.src;
+}
+    function smallToEnlarge(){
+        modalContent.src = this.src;
+        console.log("sss")
+    }
+    modalSmall[i].addEventListener("click", smallToEnlarge)
+    boxImg[i].addEventListener("click", enlarge);
+}
+
+function closeModalEnlarge(){
+    modalForEnlarge.style.display = "none"
+}
+
+modalClose.addEventListener("click", closeModalEnlarge);
