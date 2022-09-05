@@ -280,7 +280,6 @@ let imgItems = [
     }
 ]
 
-console.log(imgItems[0].path)
 let slideIndex2 = 1;
 let img1 = document.querySelector(".img1")
 img1.src = imgItems[slideIndex2].path.src;
@@ -309,12 +308,3 @@ previous.addEventListener("click", minus2);
 
 
 
-
-
-
-
-
-{/* <img src= alt="product Image">
-        <img src="images/image-product-2.jpg" alt="product Image">
-        <img src="images/image-product-3.jpg" alt="product Image">
-        <img src="images/image-product-4.jpg" alt="product Image"></img> */}

@@ -86,9 +86,20 @@ header .hamburger{
     top:0;
     display: none;
     z-index: 3;
+    
+}
+
+@keyframes slideIn{
+    0%{
+        transform: translateX(-500px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
 }
 
 .opac ul{
+    animation: slideIn .75s cubic-bezier(0.77, -0.17, 0.46, 2);
     width:55%;
     height:100vh;
     background-color: var(--background-color);
